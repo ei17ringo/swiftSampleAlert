@@ -21,5 +21,20 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func tapBtn(sender: UIButton) {
+        
+        //アラートを作る
+        var alertController = UIAlertController(
+            title: "タイトル", message: "メッセージ", preferredStyle: .Alert)
+        
+        //OKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: {action in print("OK")}))
+        
+        //アラートを表示する
+        presentViewController(alertController, animated: true, completion: nil)
+        
+        
+        
+    }
 }
 
